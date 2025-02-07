@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detector</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../static/yolo_logo.svg" alt="logo">
+        <h2>Object Detection<br>Application<hr style="height:3px; border: none; background-color: #fff;">using <i>YOLOv9</i></h2>
+        <a href="https://github.com/ultralytics/ultralytics/tree/main" target="_blank" class="learn-more">Know more</a>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <img src="../static/yolo_logo.svg" alt="logo">
+            <h1>Object Detection</h1>
+            <p>Detects objects using YOLOv9</p>
+            <div class="buttons">
+                <button onclick="location.href='upload.html'">Upload Photo/Video</button>
+                <button onclick="location.href='webcam.html'">Live Webcam</button>
+            </div>
+        </div>
+        <div class="samples">
+            <h2>Sample Outputs</h2>
+            <div class="sample-container">
+                <div class="sample">
+                    <h3>Image Detection</h3>
+                    <img src="../static/sample_image.jpg" alt="Image Detection Sample">
+                </div>
+                <div class="sample">
+                    <h3>Video Detection</h3>
+                    <video controls>
+                        <source src="../static/sample_video.mp4" type="video/mp4">
+                        browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="sample">
+                    <h3>Webcam Detection</h3>
+                    <video controls>
+                        <source src="../static/sample_video.mp4" type="video/mp4">
+                        browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <h2>YOLOv9 Model Details</h2>
+            <h3>YOLOv9 is a state-of-the-art object detection model known for its speed and accuracy</h3>
+            <div class="yolo-details">
+                <div class="model-details">
+                    <ul>
+                        <li>Based on the YOLO (You Only Look Once) architecture</li>
+                        <li>Uses deep learning techniques for real-time object detection</li>
+                        <li>Supports custom training for detecting user-defined objects</li>
+                    </ul>
+                    <p>YOLOv9 represents a pivotal development in real-time object detection, offering significant improvements in terms of efficiency, accuracy, and adaptability. By addressing critical challenges through innovative solutions like PGI and GELAN, YOLOv9 sets a new precedent for future research and application in the field. As the AI community continues to evolve, YOLOv9 stands as a testament to the power of collaboration and innovation in driving technological progress.</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/yolov9_performance.png" alt="yolov9_performance">
+                </div>
+            </div>
+            <a href="https://github.com/ultralytics/ultralytics/tree/main" target="_blank" class="learn-more">👉  Click here to know more about YOLO  👈</a>
+        </div>        
+    </div>
+</body>
+</html>

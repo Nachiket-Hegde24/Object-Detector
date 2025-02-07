@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTime Object Detection</title>
+    <link rel="stylesheet" href="../static/webcam.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../static/yolo_logo.svg" alt="logo">
+        <h2>Object Detection<br>Application<hr style="height:3px; border: none; background-color: #fff;">using <i>YOLOv9</i></h2>
+        <a href="https://github.com/ultralytics/ultralytics/tree/main" target="_blank" class="learn-more">Know more</a>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <img src="../static/yolo_logo.svg" alt="logo">
+            <h1>RealTime Object Detection</h1>
+            <p>Click on "Open Webcam" to start the webcam:</p>
+            <button onclick="startWebcam()">Open Webcam</button>
+            <button id="turn-off-btn" onclick="turnOffWebcam()" style="display: none;">Turn Off</button>
+            <div id="webcam-feed">
+                <img id="webcam-stream" src="{{ url_for('webcam_feed') }}" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <script>
+        function startWebcam() {
+            document.getElementById('webcam-stream').style.display = 'block';
+            document.getElementById('turn-off-btn').style.display = 'inline-block';
+        }
+
+        function turnOffWebcam() {
+            document.getElementById('webcam-stream').style.display = 'none';
+            document.getElementById('turn-off-btn').style.display = 'none';
+            fetch('/turn_off_webcam', { method: 'POST' });
+        }
+    </script>
+</body>
+</html>

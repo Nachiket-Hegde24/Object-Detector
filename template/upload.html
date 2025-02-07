@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo/Video</title>
+    <link rel="stylesheet" href="../static/upload.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../static/yolo_logo.svg" alt="logo">
+        <h2>Object Detection<br>Application<hr style="height:3px; border: none; background-color: #fff;">using <i>YOLOv9</i></h2>
+        <a href="https://github.com/ultralytics/ultralytics/tree/main" target="_blank" class="learn-more">Know more</a>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <img src="../static/yolo_logo.svg" alt="logo">
+            <h1>Upload Image or Video</h1>
+            <p>Select a .jpg or .mp4 file from your local storage:</p>
+            <form action="/predict_img" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".jpg, .jpeg, .mp4" required>
+                <br><br>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
